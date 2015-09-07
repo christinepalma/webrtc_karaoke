@@ -1,0 +1,30 @@
+{
+  "name": "webrtc_karaoke",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "dependencies": {
+    "body-parser": "^1.13.3",
+    "bcrypt-nodejs": "^0.0.3",
+    "express": "^4.13.3",
+    "jsonwebtoken": "^5.0.5",
+    "mongoose": "^4.1.5",
+    "morgan": "^1.6.1",
+    "path": "^0.11.14"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/christinepalma/webrtc_karaoke.git"
+  },
+  "author": "Christine Palma",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/christinepalma/webrtc_karaoke/issues"
+  },
+  "homepage": "https://github.com/christinepalma/webrtc_karaoke#readme"
+}
