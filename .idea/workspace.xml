@@ -3,7 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="41bd1b12-e139-413f-97a9-42494548e2d5" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/app/services/authService.js" afterPath="$PROJECT_DIR$/public/app/services/authService.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/app/services/userService.js" afterPath="$PROJECT_DIR$/public/app/services/userService.js" />
     </list>
     <ignored path="webrtc_karaoke.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -36,21 +36,21 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="authService.js" pinned="false" current-in-tab="true">
+      <file leaf-file-name="authService.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/public/app/services/authService.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.84246576">
-              <caret line="116" column="8" selection-start-line="116" selection-start-column="8" selection-end-line="116" selection-end-column="8" />
+            <state vertical-scroll-proportion="0.0">
+              <caret line="119" column="7" selection-start-line="119" selection-start-column="7" selection-end-line="119" selection-end-column="7" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="userService.js" pinned="false" current-in-tab="false">
+      <file leaf-file-name="userService.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/public/app/services/userService.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+            <state vertical-scroll-proportion="0.65753424">
+              <caret line="32" column="39" selection-start-line="32" selection-start-column="39" selection-end-line="32" selection-end-column="39" />
               <folding />
             </state>
           </provider>
@@ -123,6 +123,7 @@
         <option value="$PROJECT_DIR$/public/app/controllers/mainCtrl.js" />
         <option value="$PROJECT_DIR$/public/app/controllers/userCtrl.js" />
         <option value="$PROJECT_DIR$/public/app/services/authService.js" />
+        <option value="$PROJECT_DIR$/public/app/services/userService.js" />
       </list>
     </option>
   </component>
@@ -487,14 +488,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/public/app/services/userService.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/public/app/views/app.js">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -505,8 +498,16 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/public/app/services/authService.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.84246576">
-          <caret line="116" column="8" selection-start-line="116" selection-start-column="8" selection-end-line="116" selection-end-column="8" />
+        <state vertical-scroll-proportion="0.0">
+          <caret line="119" column="7" selection-start-line="119" selection-start-column="7" selection-end-line="119" selection-end-column="7" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/app/services/userService.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.65753424">
+          <caret line="32" column="39" selection-start-line="32" selection-start-column="39" selection-end-line="32" selection-end-column="39" />
           <folding />
         </state>
       </provider>

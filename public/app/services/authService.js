@@ -114,7 +114,7 @@ angular.module('authService', [])
 // RETURN THE ERRORS FROM THE SERVER AS A PROMISE
             return $q.reject(response);
         };
-        
+
         return interceptorFactory;
 
     });
