@@ -18,6 +18,7 @@ var apiRouter = express.Router();
 
 // ROUTE TO AUTHENTICATE A USER (POST http://localhost:8080/api/authenticate)
     apiRouter.post('/authenticate', function(req, res) {
+
 //FIND THE USER
         User.findOne({
             username: req.body.username
@@ -67,6 +68,7 @@ var apiRouter = express.Router();
 
 //ROUTE MIDDLEWARE TO VERIFY TOKEN
     apiRouter.use(function(req, res, next) {
+
 // DO LOGGING
         console.log('Somebody just came to our app!');
 
@@ -85,8 +87,10 @@ var apiRouter = express.Router();
                         message: 'Failed to authenticate token.'
                     });
                 } else {
+
 //IF EVERYTHING IS GOOD, SAVE REQUEST FOR USE IN OTHER ROUTES
                     req.decoded = decoded;
+
 //MAKE SURE WE GO TO NEXT ROUTES AND DO NOT STOP HERE
                     next();
                 }
@@ -125,30 +129,37 @@ var apiRouter = express.Router();
 
 // SET THE USERS NAME - COMES FROM THE REQUEST
             user.name = req.body.name;
+
 // SET THE USERS USERNAME - COMES FROM THE REQUEST
             user.username = req.body.username;
+
 // SET THE USERS EMAIL - COMES FROM THE REQUEST
             user.email = req.body.email;
+
 // SET THE USERS PASSWORD - COMES FROM THE REQUEST
             user.password = req.body.password;
 
 
             user.save(function(err) {
                 if (err) {
+
 // ERROR MESSAGE IF DUPLICATE ENTRY
-               if (err.code == 11000)
+                    if (err.code == 11000)
                         return res.json({ success: false, message: 'A user with that username already exists. '});
                     else
                         return res.send(err);
                 }
+
 // RETURN MESSAGE WHEN USER CREATED
                 res.json({ message: 'User created!' });
             });
         })
+
 // GET ALL THE USERS (accessed at GET http://localhost:8080/api/users)
         .get(function(req, res) {
             User.find({}, function(err, users) {
                 if (err) res.send(err);
+
 //RETURN THE USERS
                 res.json(users);
             });
@@ -208,7 +219,7 @@ var apiRouter = express.Router();
         });
 
 
-    
+
 //API ENDPOINT TO GET USER INFORMATION
     apiRouter.get('/me', function(req, res) {
         res.send(req.decoded);
