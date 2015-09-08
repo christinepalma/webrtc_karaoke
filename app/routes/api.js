@@ -153,3 +153,66 @@ var apiRouter = express.Router();
                 res.json(users);
             });
         });
+
+
+
+// ON ROUTES THAT END IN  /users/:user_id
+    // ----------------------------------------------------
+    apiRouter.route('/users/:user_id')
+
+
+// GET SPECIFIC USER WITH THAT ID
+        .get(function(req, res) {
+            User.findById(req.params.user_id, function(err, user) {
+                if (err) res.send(err);
+
+// RETURN THAT USER
+                res.json(user);
+            });
+        })
+
+
+// UPDATE USER WITH THAT ID
+        .put(function(req, res) {
+            User.findById(req.params.user_id, function(err, user) {
+
+                if (err) res.send(err);
+
+// SET THE NEW USER INFORMATION IF IT EXISTS IN THE REQUEST
+                if (req.body.name) user.name = req.body.name;
+                if (req.body.username) user.username = req.body.username;
+                if (req.body.password) user.password = req.body.password;
+
+// SAVE THE USER
+                user.save(function(err) {
+                    if (err) res.send(err);
+
+                    // return a message
+                    res.json({ message: 'User updated!' });
+                });
+
+            });
+        })
+
+
+
+// DELETE A USER WITH THIS ID
+        .delete(function(req, res) {
+            User.remove({
+                _id: req.params.user_id
+            }, function(err, user) {
+                if (err) res.send(err);
+
+                res.json({ message: 'Successfully deleted' });
+            });
+        });
+
+
+    
+//API ENDPOINT TO GET USER INFORMATION
+    apiRouter.get('/me', function(req, res) {
+        res.send(req.decoded);
+    });
+
+    return apiRouter;
+};
